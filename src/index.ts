@@ -76,7 +76,7 @@ async function run() {
       console.log("firebase.json file found. Continuing deploy.");
     } else {
       throw Error(
-        "firebase.json file not found. If your firebase.json file is not in the root of your repo, edit the entryPoint option of this GitHub action."
+          entryFile + " file not found. If your " + entryFile + " file is not in the root of your repo, edit the entryPoint option of this GitHub action."
       );
     }
     endGroup();
