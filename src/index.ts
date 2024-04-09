@@ -48,6 +48,7 @@ const isProductionDeploy = configuredChannelId === "live";
 const token = process.env.GITHUB_TOKEN || getInput("repoToken");
 const octokit = token ? getOctokit(token) : undefined;
 const entryPoint = getInput("entryPoint");
+const entryFile = getInput("entryFile") || "./firebase.json";
 const target = getInput("target");
 const firebaseToolsVersion = getInput("firebaseToolsVersion");
 
@@ -71,7 +72,7 @@ async function run() {
       }
     }
 
-    if (existsSync("./firebase.json")) {
+    if (existsSync(entryFile)) {
       console.log("firebase.json file found. Continuing deploy.");
     } else {
       throw Error(
