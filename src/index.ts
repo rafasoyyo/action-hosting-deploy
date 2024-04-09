@@ -48,7 +48,7 @@ const isProductionDeploy = configuredChannelId === "live";
 const token = process.env.GITHUB_TOKEN || getInput("repoToken");
 const octokit = token ? getOctokit(token) : undefined;
 const entryPoint = getInput("entryPoint");
-const entryFile = getInput("entryFile") || "./firebase.json";
+const entryFile = getInput("entryFile");
 const target = getInput("target");
 const firebaseToolsVersion = getInput("firebaseToolsVersion");
 

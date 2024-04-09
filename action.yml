@@ -19,7 +19,7 @@ branding:
   icon: "globe"
   color: "blue"
 runs:
-  using: "node16"
+  using: "node20"
   main: "bin/action.min.js"
 inputs:
   repoToken:
@@ -53,6 +53,11 @@ inputs:
       "The location of your firebase.json file, relative to the root of your
       directory"
     default: "."
+    required: false
+  entryFile:
+    description:
+      "The name of your firebase.json file."
+    default: "firebase.json"
     required: false
   firebaseToolsVersion:
     description: >-
