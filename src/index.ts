@@ -73,10 +73,10 @@ async function run() {
     }
 
     if (existsSync(entryFile)) {
-      console.log("firebase.json file found. Continuing deploy.");
+        console.log(entryFile + " file found. Continuing deploy.");
     } else {
       throw Error(
-          entryFile + " file not found. If your " + entryFile + " file is not in the root of your repo, edit the entryPoint option of this GitHub action."
+          entryFile + " file was not found. If your " + entryFile + " file is not in the root of your repo, edit the entryPoint option of this GitHub action."
       );
     }
     endGroup();
