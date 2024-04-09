@@ -76,7 +76,7 @@ async function run() {
         console.log(entryFile + " file found. Continuing deploy.");
     } else {
       throw Error(
-          entryFile + " file was not found. If your " + entryFile + " file is not in the root of your repo, edit the entryPoint option of this GitHub action."
+          "The File " + entryFile + " was not found. If your " + entryFile + " file is not in the root of your repo, edit the entryPoint option of this GitHub action."
       );
     }
     endGroup();
